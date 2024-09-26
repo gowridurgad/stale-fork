@@ -4,12 +4,14 @@ on:
   pull_request:
     paths-ignore:
       - '**.md'
+  workflow_dispatch:
   push:
     branches:
       - main
       - releases/*
     paths-ignore:
       - '**.md'
+      
 
 jobs:
   dry-run-test: # make sure the action works on a clean machine without building
